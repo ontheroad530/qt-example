@@ -1,0 +1,25 @@
+<UI version="4.0" >
+ <class>SplashClass</class>
+ <widget class="QWidget" name="SplashClass" >
+  <property name="objectName" >
+   <string notr="true">SplashClass</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Splash</string>
+  </property>$centralwidget$
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources>
+   <include location="splash.qrc"/>
+ </resources>
+ <connections/>
+</UI>
