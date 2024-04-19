@@ -13,7 +13,7 @@
     the GNU General Public License for more details.
 */
 
-#include <QtWidgets/QWidget>>
+#include <QtWidgets/QWidget>
 #include <QApplication>
 #include <QByteArray>
 #include <QList>
