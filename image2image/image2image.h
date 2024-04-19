@@ -2,6 +2,8 @@
 
 #include <QMainWindow>
 
+#include <atomic>
+
 class QCloseEvent;
 class QComboBox;
 class QLabel;
@@ -34,6 +36,8 @@ private:
 	void createConnections();
 	void convertFiles(const QStringList& sourceFiles);
 
+	static void convertImages(QObject* receiver, const QStringList& sourceFiles, const QString& targetType);
+
 private:
 	QLabel*			m_directoryLabel = nullptr;
 	QLineEdit*		m_directoryEdit = nullptr;
@@ -47,5 +51,6 @@ private:
 
 	int				m_total = 0;
 	int				m_done = 0;
-	volatile bool	m_stopped = true;
+	//volatile bool	m_stopped = true;
+	std::atomic_bool	m_stopped = true;
 };

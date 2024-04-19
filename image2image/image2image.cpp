@@ -58,30 +58,6 @@ struct ProgressEvent : public QEvent
 	const QString message;
 };
 
-void convertImages(QObject* receiver, volatile bool* stopped,
-	const QStringList& sourceFiles, const QString& targetType)
-{
-	foreach(const QString & source, sourceFiles) {
-		if (*stopped)
-			return;
-		QImage image(source);
-		QString target(source);
-		target.chop(QFileInfo(source).suffix().length());
-		target += targetType.toLower();
-		if (*stopped)
-			return;
-		bool saved = image.save(target);
-
-		QString message = saved
-			? QObject::tr("Saved '%1'")
-			.arg(QDir::toNativeSeparators(target))
-			: QObject::tr("Failed to convert '%1'")
-			.arg(QDir::toNativeSeparators(source));
-		QApplication::postEvent(receiver,
-			new ProgressEvent(saved, message));
-	}
-}
-
 Image2Image::Image2Image(QWidget *parent)
 	: QMainWindow(parent)
 {
@@ -93,6 +69,9 @@ Image2Image::Image2Image(QWidget *parent)
 	updateUi();
 	m_directoryEdit->setFocus();
 	setWindowTitle(QApplication::applicationName());
+
+	//
+	resize(640*0.8, 480*0.8);
 }
 
 Image2Image::~Image2Image()
@@ -283,10 +262,38 @@ void Image2Image::convertFiles(const QStringList& sourceFiles)
 
 	int offset = 0;
 	foreach(const int chunkSize, sizes) {
-		QtConcurrent::run(convertImages, this, &m_stopped,
+		QtConcurrent::run(convertImages, this,
 			sourceFiles.mid(offset, chunkSize),
 			m_targetTypeComboBox->currentText());
 		offset += chunkSize;
 	}
 	checkIfDone();
+}
+
+void Image2Image::convertImages(QObject* receiver, const QStringList& sourceFiles, const QString& targetType)
+{
+	Image2Image* image2Image = qobject_cast<Image2Image*>(receiver);
+	if (!image2Image) {
+		return;
+	}
+
+	foreach(const QString & source, sourceFiles) {
+		if (image2Image->m_stopped)
+			return;
+		QImage image(source);
+		QString target(source);
+		target.chop(QFileInfo(source).suffix().length());
+		target += targetType.toLower();
+		if (image2Image->m_stopped)
+			return;
+		bool saved = image.save(target);
+
+		QString message = saved
+			? QObject::tr("Saved '%1'")
+			.arg(QDir::toNativeSeparators(target))
+			: QObject::tr("Failed to convert '%1'")
+			.arg(QDir::toNativeSeparators(source));
+		QApplication::postEvent(receiver,
+			new ProgressEvent(saved, message));
+	}
 }
