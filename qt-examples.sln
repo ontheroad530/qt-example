@@ -13,9 +13,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "splash", "splash\splash.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "commandline", "commandline\commandline.vcxproj", "{460675D7-7323-49DA-8CBC-732A811271B5}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtcad", "qtcad\qtcad.vcxproj", "{3C4E5BCF-7B09-429A-954B-3A1F0BA2CA9E}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "image2image", "image2image\image2image.vcxproj", "{F388AD90-80ED-47BE-ACA8-7B2D76D7AB28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "qtro", "qtro", "{06128DE2-5DF5-44CA-861E-EB9631ACFFC7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtroreplica", "qtroreplica\qtroreplica.vcxproj", "{6D7FF008-0F70-4977-87A4-9B9DFB38AAF5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtrosource", "qtrosource\qtrosource.vcxproj", "{1D6E04BC-F45C-475A-A0DA-79C65ADA9336}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dynamicclient", "dynamicclient\dynamicclient.vcxproj", "{C2285028-AEE8-48AB-9472-C2E84B76605B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,17 +49,30 @@ Global
 		{460675D7-7323-49DA-8CBC-732A811271B5}.Debug|x64.Build.0 = Debug|x64
 		{460675D7-7323-49DA-8CBC-732A811271B5}.Release|x64.ActiveCfg = Release|x64
 		{460675D7-7323-49DA-8CBC-732A811271B5}.Release|x64.Build.0 = Release|x64
-		{3C4E5BCF-7B09-429A-954B-3A1F0BA2CA9E}.Debug|x64.ActiveCfg = Debug|x64
-		{3C4E5BCF-7B09-429A-954B-3A1F0BA2CA9E}.Debug|x64.Build.0 = Debug|x64
-		{3C4E5BCF-7B09-429A-954B-3A1F0BA2CA9E}.Release|x64.ActiveCfg = Release|x64
-		{3C4E5BCF-7B09-429A-954B-3A1F0BA2CA9E}.Release|x64.Build.0 = Release|x64
 		{F388AD90-80ED-47BE-ACA8-7B2D76D7AB28}.Debug|x64.ActiveCfg = Debug|x64
 		{F388AD90-80ED-47BE-ACA8-7B2D76D7AB28}.Debug|x64.Build.0 = Debug|x64
 		{F388AD90-80ED-47BE-ACA8-7B2D76D7AB28}.Release|x64.ActiveCfg = Release|x64
 		{F388AD90-80ED-47BE-ACA8-7B2D76D7AB28}.Release|x64.Build.0 = Release|x64
+		{6D7FF008-0F70-4977-87A4-9B9DFB38AAF5}.Debug|x64.ActiveCfg = Debug|x64
+		{6D7FF008-0F70-4977-87A4-9B9DFB38AAF5}.Debug|x64.Build.0 = Debug|x64
+		{6D7FF008-0F70-4977-87A4-9B9DFB38AAF5}.Release|x64.ActiveCfg = Release|x64
+		{6D7FF008-0F70-4977-87A4-9B9DFB38AAF5}.Release|x64.Build.0 = Release|x64
+		{1D6E04BC-F45C-475A-A0DA-79C65ADA9336}.Debug|x64.ActiveCfg = Debug|x64
+		{1D6E04BC-F45C-475A-A0DA-79C65ADA9336}.Debug|x64.Build.0 = Debug|x64
+		{1D6E04BC-F45C-475A-A0DA-79C65ADA9336}.Release|x64.ActiveCfg = Release|x64
+		{1D6E04BC-F45C-475A-A0DA-79C65ADA9336}.Release|x64.Build.0 = Release|x64
+		{C2285028-AEE8-48AB-9472-C2E84B76605B}.Debug|x64.ActiveCfg = Debug|x64
+		{C2285028-AEE8-48AB-9472-C2E84B76605B}.Debug|x64.Build.0 = Debug|x64
+		{C2285028-AEE8-48AB-9472-C2E84B76605B}.Release|x64.ActiveCfg = Release|x64
+		{C2285028-AEE8-48AB-9472-C2E84B76605B}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6D7FF008-0F70-4977-87A4-9B9DFB38AAF5} = {06128DE2-5DF5-44CA-861E-EB9631ACFFC7}
+		{1D6E04BC-F45C-475A-A0DA-79C65ADA9336} = {06128DE2-5DF5-44CA-861E-EB9631ACFFC7}
+		{C2285028-AEE8-48AB-9472-C2E84B76605B} = {06128DE2-5DF5-44CA-861E-EB9631ACFFC7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81DEF403-86C6-4C74-AD85-670D09EF28AC}
