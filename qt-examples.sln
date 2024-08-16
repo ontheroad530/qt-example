@@ -23,6 +23,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtrosource", "qtrosource\qt
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dynamicclient", "dynamicclient\dynamicclient.vcxproj", "{C2285028-AEE8-48AB-9472-C2E84B76605B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "colordialog", "colordialog\colordialog.vcxproj", "{98096990-3F23-42F5-B512-2616F936B528}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "timeschedule", "timeschedule\timeschedule.vcxproj", "{58E7DD0B-5D4B-4E49-BAE6-B0F587D92674}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -65,6 +69,14 @@ Global
 		{C2285028-AEE8-48AB-9472-C2E84B76605B}.Debug|x64.Build.0 = Debug|x64
 		{C2285028-AEE8-48AB-9472-C2E84B76605B}.Release|x64.ActiveCfg = Release|x64
 		{C2285028-AEE8-48AB-9472-C2E84B76605B}.Release|x64.Build.0 = Release|x64
+		{98096990-3F23-42F5-B512-2616F936B528}.Debug|x64.ActiveCfg = Debug|x64
+		{98096990-3F23-42F5-B512-2616F936B528}.Debug|x64.Build.0 = Debug|x64
+		{98096990-3F23-42F5-B512-2616F936B528}.Release|x64.ActiveCfg = Release|x64
+		{98096990-3F23-42F5-B512-2616F936B528}.Release|x64.Build.0 = Release|x64
+		{58E7DD0B-5D4B-4E49-BAE6-B0F587D92674}.Debug|x64.ActiveCfg = Debug|x64
+		{58E7DD0B-5D4B-4E49-BAE6-B0F587D92674}.Debug|x64.Build.0 = Debug|x64
+		{58E7DD0B-5D4B-4E49-BAE6-B0F587D92674}.Release|x64.ActiveCfg = Release|x64
+		{58E7DD0B-5D4B-4E49-BAE6-B0F587D92674}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
