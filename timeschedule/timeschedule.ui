@@ -11,12 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>TimeSchedule</string>
+   <string notr="true">TimeSchedule</string>
   </property>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="timeschedule.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
