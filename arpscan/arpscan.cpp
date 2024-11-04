@@ -102,7 +102,6 @@ void ArpScan::sendArpImpl(qint64 id, ulong nIp)
 	ULONG MacAddr[2];       /* for 6-byte hardware addresses */
 	ULONG PhysAddrLen = 6;  /* default to length of six bytes */
 	
-
 	memset(&MacAddr, 0xff, sizeof(MacAddr));
 	PhysAddrLen = 6;
 

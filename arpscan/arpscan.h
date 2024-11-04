@@ -27,4 +27,3 @@ private:
 	static void sendArpImpl(qint64 id, ulong nIp);
 };
 
-bool arpScan(const QString& ip_mask, QList<QPair<QString, QString>>& ip_macs, uint timeoutMS);
